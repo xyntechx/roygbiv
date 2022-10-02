@@ -26,6 +26,12 @@ const Home: NextPage = () => {
                     Hard
                 </a>
             </Link>
+            <Link href="/game/custom">
+                <a className="border border-blue-400 rounded-lg py-2 px-5 w-1/5 text-center text-blue-600 text-lg hover:bg-blue-400 hover:text-black transition-colors mb-3">
+                    Custom
+                </a>
+            </Link>
+
             <Link href="/help">
                 <a className="border-4 border-blue-600 rounded-full py-1 px-3 text-center text-blue-600 text-lg hover:bg-blue-600 hover:text-white transition-colors fixed bottom-10 right-10 font-bold animate-bounce">
                     ?
