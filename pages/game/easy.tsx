@@ -15,8 +15,8 @@ const Easy: NextPage = () => {
     const [score, setScore] = useState(0);
     const [start, setStart] = useState(false);
 
-    const correctAudio = new Audio("/correct-audio.wav");
-    const wrongAudio = new Audio("/wrong-audio.wav");
+    const correctAudio = new Audio("/audio/correct-audio.wav");
+    const wrongAudio = new Audio("/audio/wrong-audio.wav");
 
     useEffect(() => {
         setDisplay(() => COLORS.fixed[Math.floor(Math.random() * 7)]);
@@ -47,7 +47,7 @@ const Easy: NextPage = () => {
         <main className="flex min-h-screen flex-col items-center justify-center py-2">
             <Head>
                 <title>roygbiv</title>
-                <link rel="icon" href="/favicon-easy.ico" />
+                <link rel="icon" href="/favicon/easy.ico" />
             </Head>
 
             {start ? (

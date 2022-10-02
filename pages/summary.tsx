@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <main className="flex min-h-screen flex-col items-center justify-center py-2">
             <Head>
                 <title>roygbiv</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon/favicon.ico" />
             </Head>
 
             <p className="text-xl mb-1">You scored</p>
