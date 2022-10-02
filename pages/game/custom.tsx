@@ -22,8 +22,13 @@ const Custom: NextPage = () => {
     const [scramble, setScramble] = useState(false);
     const [mismatch, setMismatch] = useState(false);
 
-    const correctAudio = new Audio("/audio/correct-audio.wav");
-    const wrongAudio = new Audio("/audio/wrong-audio.wav");
+    const [correctAudio, setCorrectAudio] = useState<HTMLAudioElement>();
+    const [wrongAudio, setWrongAudio] = useState<HTMLAudioElement>();
+
+    useEffect(() => {
+        setCorrectAudio(new Audio("/audio/correct-audio.wav"));
+        setWrongAudio(new Audio("/audio/wrong-audio.wav"));
+    }, []);
 
     useEffect(() => {
         setDisplay(() => COLORS.fixed[Math.floor(Math.random() * 7)]);
@@ -44,9 +49,9 @@ const Custom: NextPage = () => {
         if (answer.length > 0) {
             if (answer === display) {
                 setScore((score) => (score += 1));
-                correctAudio.play();
+                correctAudio!.play();
             } else {
-                wrongAudio.play();
+                wrongAudio!.play();
             }
         }
     };
