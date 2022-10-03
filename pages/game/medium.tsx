@@ -34,7 +34,7 @@ const Medium: NextPage = () => {
 
     useEffect(() => {
         localStorage.setItem("ROYGBIV Score", JSON.stringify(score));
-        if (timer === 0) window.location.href = "/summary";
+        if (timer! <= 0) window.location.href = "/summary";
         const intervalID = setTimeout(() => {
             setTimer((timer) => (timer! -= 1));
         }, 1000);
