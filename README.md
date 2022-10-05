@@ -1,5 +1,5 @@
 # roygbiv
-A colorful reaction time game.
+A colorful reaction time game. Play it [here](https://roygbiv.vercel.app/)!
 
 ## 🤖 Technologies
 - Next.js
