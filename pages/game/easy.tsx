@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import ButtonLink from "../../components/ButtonLink";
 import Buttons from "../../components/Buttons";
 import COLORS from "../../utils/colors";
 
@@ -61,7 +62,7 @@ const Easy: NextPage = () => {
                     <p className="text-2xl mb-5 font-bold">{score}</p>
 
                     <h1
-                        className={`font-bold text-5xl mb-20 ${(() => {
+                        className={`font-bold text-3xl md:text-5xl mb-10 md:mb-20 ${(() => {
                             switch (display) {
                                 case "red":
                                     return "text-red-500";
@@ -94,7 +95,7 @@ const Easy: NextPage = () => {
             ) : (
                 <>
                     <h1 className="font-bold text-5xl">Easy</h1>
-                    <ul className="list-disc text-xl mt-5">
+                    <ul className="list-disc text-lg md:text-xl mt-5 px-1 text-center md:text-left">
                         <li>
                             You have 30 seconds to match as many colors as
                             possible
@@ -107,15 +108,11 @@ const Easy: NextPage = () => {
                             setStart(true);
                             setTimer(30);
                         }}
-                        className="border border-blue-400 rounded-lg py-2 px-5 w-1/5 text-center text-blue-600 text-lg hover:bg-blue-400 hover:text-black transition-colors mt-10 mb-3"
+                        className="border border-blue-400 rounded-lg py-2 px-5 w-3/5 md:w-1/5 text-center text-blue-600 text-lg hover:bg-blue-400 hover:text-black transition-colors mt-10 mb-3"
                     >
                         Start
                     </button>
-                    <Link href="/">
-                        <a className="border border-red-400 rounded-lg py-2 px-5 w-1/5 text-center text-red-500 text-lg hover:bg-red-400 hover:text-black transition-colors mb-3">
-                            Back
-                        </a>
-                    </Link>
+                    <ButtonLink url="/" text="Back" color="red" />
                 </>
             )}
         </main>

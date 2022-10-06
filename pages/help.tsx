@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import ButtonLink from "../components/ButtonLink";
 
 const Help: NextPage = () => {
     return (
@@ -28,11 +29,9 @@ const Help: NextPage = () => {
                 <Image src="/help/hard.png" width={720} height={450} />
             </div>
 
-            <Link href="/">
-                <a className="border border-blue-400 rounded-lg py-2 px-5 w-1/5 text-center text-blue-600 text-lg hover:bg-blue-400 hover:text-black transition-colors my-10">
-                    Home
-                </a>
-            </Link>
+            <br />
+
+            <ButtonLink url="/" text="Home" color="blue" />
         </main>
     );
 };

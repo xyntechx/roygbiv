@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import ButtonLink from "../../components/ButtonLink";
 import Buttons from "../../components/Buttons";
 import COLORS from "../../utils/colors";
 
@@ -70,7 +71,7 @@ const Custom: NextPage = () => {
 
                     {mismatch ? (
                         <h1
-                            className={`font-bold text-5xl mb-20 ${(() => {
+                            className={`font-bold text-3xl md:text-5xl mb-10 md:mb-20 ${(() => {
                                 switch (displayColor) {
                                     case "red":
                                         return "text-red-500";
@@ -185,15 +186,11 @@ const Custom: NextPage = () => {
                             setStart(true);
                             setTimer(timerValue.current);
                         }}
-                        className="border border-blue-400 rounded-lg py-2 px-5 w-1/5 text-center text-blue-600 text-lg hover:bg-blue-400 hover:text-black transition-colors mt-10 mb-3"
+                        className="border border-blue-400 rounded-lg py-2 px-5 w-3/5 md:w-1/5 text-center text-blue-600 text-lg hover:bg-blue-400 hover:text-black transition-colors mt-10 mb-3"
                     >
                         Start
                     </button>
-                    <Link href="/">
-                        <a className="border border-red-400 rounded-lg py-2 px-5 w-1/5 text-center text-red-500 text-lg hover:bg-red-400 hover:text-black transition-colors mb-3">
-                            Back
-                        </a>
-                    </Link>
+                    <ButtonLink url="/" text="Back" color="red" />
                 </>
             )}
         </main>
