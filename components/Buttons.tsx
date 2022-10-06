@@ -79,7 +79,7 @@ const Button = ({ color, setAnswer, toggle, setToggle }: ButtonProps) => {
                     default:
                         return "bg-white";
                 }
-            })()} py-14 px-14 mx-5 hover:scale-110 transition-transform`}
+            })()} md:p-14 p-5 md:mx-5 mx-1 hover:scale-110 transition-transform`}
         />
     );
 };
